@@ -2,11 +2,13 @@ import { saveEntry, deleteEntry, editEntry } from "./storage.js";
 import { loadEntry, displayEntry } from "./entries.js";
 import { showPreviousEntry, showNextEntry } from "./navigation.js";
 import { setCurrentDateTime } from "../modules/dateTime.js";
-import { el, group, id } from "./lib.js";
+import { setupSearch } from "./searchfield.js";
+import { el, id } from "./lib.js";
 
 export function init() {
   document.addEventListener("DOMContentLoaded", () => {
     setCurrentDateTime();
+    setupSearch();
 
     el("#form").addEventListener("submit", (event) => {
       event.preventDefault();
