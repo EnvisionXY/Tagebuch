@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tagebuch</title>
+    <link rel="stylesheet" href="CSS/style.css" />
+    <link rel="stylesheet" href="CSS/entries.css" />
+    <link rel="shortcut icon" href="favicon-32x32.png" / type="image/x-icon">
+    <meta name="mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+    <meta name="apple-mobile-web-app-title" content="Tagebuch WPA" />
+    <meta name="description" content="A simple diary for your thoughts." />
+    <link rel="apple-touch-icon" href="/images/icon-152x152.png" />
+    <script src="js/app.js" type="module" defer></script>
+  </head>
+  <body>
+    <h1>Hey, Will!</h1>
+    <div class="nav">
+      <div class="controls">
+        <button id="load-entries">Einträge anzeigen</button>
+      </div>
+
+      <div class="search-container">
+        <input
+          type="text"
+          id="search"
+          placeholder="Suche nach Datum oder Stichwort..."
+        />
+      </div>
+    </div>
+    <form action="" method="get" id="form">
+      <div class="form">
+        <label for="location">Ort:</label>
+        <input type="text" name="location" id="location" />
+      </div>
+      <div class="form">
+        <label for="entry-date">Datum:</label>
+        <input type="date" name="date" id="entry-date" />
+      </div>
+      <div class="form">
+        <label for="entry-time">Uhrzeit:</label>
+        <input type="time" name="time" id="entry-time" />
+      </div>
+
+      <div class="form">
+        <label for="mood">Stimmung</label>
+        <input type="number" name="mood" id="mood" min="1" max="10" value="5" />
+      </div>
+      <div class="form">
+        <label for="good-today">Was habe ich heute gut gemacht? :</label>
+        <textarea name="good-today" id="good-today" rows="2"></textarea>
+      </div>
+      <div class="form">
+        <label for="beautiful-moment">Welcher Moment war heute schön? :</label>
+        <textarea
+          name="beautiful-moment"
+          id="beautiful-moment"
+          rows="2"
+        ></textarea>
+      </div>
+      <div class="form">
+        <label for="felt-good">Wann habe ich mich heute gut gefühlt? :</label>
+        <textarea name="felt-good" id="felt-good" rows="2"></textarea>
+      </div>
+      <div class="form">
+        <label for="had-fun">Was hat mir heute Spaß gemacht? :</label>
+        <textarea name="had-fun" id="had-fun" rows="2"></textarea>
+      </div>
+      <div class="form">
+        <label for="looking-forward">Worauf freue ich mich morgen? :</label>
+        <textarea
+          name="looking-forward"
+          id="looking-forward"
+          rows="2"
+        ></textarea>
+      </div>
+      <div class="form">
+        <label for="other-thoughts"
+          >Was geht mir sonst so durch den Kopf? :</label
+        >
+        <textarea name="other-thoughts" id="other-thoughts" rows="2"></textarea>
+      </div>
+      <div class="form">
+        <input type="submit" value="Submit" id="submit" />
+      </div>
+    </form>
+    <div id="entries-container"></div>
+  </body>
+</html>

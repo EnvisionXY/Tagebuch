@@ -1,0 +1,188 @@
+/* 🎨 1️⃣ Farbvariablen definieren */
+:root {
+  --dark-blue: #16232e;
+  --dark-green: #164c45;
+  --gold: #cc8d1a;
+  --light-gold: #e3c75f;
+  --dark-yellow: #bda523;
+  --text-light: #e3c75f;
+  --text-dark: #16232e;
+}
+
+/* 🌍 2️⃣ Grundlegendes Styling für die gesamte Seite */
+body {
+  font-family: Arial, sans-serif;
+  background-color: var(--dark-blue);
+  color: var(--text-light);
+  margin: 0;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* 🏷️ 3️⃣ Überschrift-Styling */
+h1 {
+  font-size: 2em;
+  margin-bottom: 20px;
+  color: var(--gold);
+}
+
+.nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+  width: 100%;
+  max-width: 540px;
+  margin: 0 auto;
+  margin-bottom: 20px;
+}
+
+/* 📑 4️⃣ Styling für das Formular */
+form {
+  background: var(--dark-green);
+  padding: 20px;
+  border-radius: 10px;
+
+  width: 100%;
+  max-width: 500px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+/* 🔲 5️⃣ Eingabefelder und Labels */
+.form {
+  display: flex;
+  flex-direction: column;
+}
+
+label {
+  font-weight: bold;
+  margin-bottom: 5px;
+  color: var(--text-light);
+}
+
+input,
+textarea {
+  padding: 10px;
+  border: 1px solid var(--dark-yellow);
+  border-radius: 5px;
+  font-size: 1em;
+  background-color: var(--light-gold);
+  color: var(--text-dark);
+}
+
+textarea {
+  resize: vertical;
+}
+
+/* 🎛️ 6️⃣ Button-Styling */
+#submit,
+#save-edit {
+  background: var(--gold);
+  color: white;
+  border: none;
+  padding: 12px;
+  font-size: 1.2em;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+#submit:hover,
+#save-edit:hover {
+  background: var(--dark-yellow);
+}
+
+.cancel-style {
+  background: var(--dark-blue);
+  color: white;
+  border: none;
+  padding: 12px;
+  font-size: 1.2em;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.cancel-style:hover {
+  background: var(--dark-yellow);
+}
+
+/* 🖱️ 7️⃣ Steuerungsleiste (Buttons & Suchfeld) */
+.entries-navigation {
+  margin-bottom: 20px;
+}
+
+.controls-container {
+  width: 600px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* 🔘 8️⃣ Buttons links, Mitte & rechts */
+#prev,
+#load-entries,
+#next {
+  background: var(--gold);
+  color: var(--text-dark);
+  border: none;
+  padding: 10px 15px;
+  font-size: 1em;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background 0.3s ease, transform 0.2s ease;
+  display: flex;
+  align-items: center;
+  gap: 8px; /* Abstand zwischen Icon und Text */
+}
+
+#prev:hover,
+#load-entries:hover,
+#next:hover {
+  background: var(--dark-yellow);
+  transform: scale(1.05);
+}
+
+/* 🔹 9️⃣ SVG Icons für die Buttons */
+.controls button svg {
+  stroke: var(--text-dark);
+  width: 18px;
+  height: 18px;
+}
+
+/* 🔍 🔟 Suchfeld unter den Buttons */
+.search-container {
+  display: flex;
+  justify-content: center;
+  flex-grow: 1;
+}
+
+.search-container input[type="text"] {
+  border: 1px solid var(--dark-yellow);
+  border-radius: 5px;
+  font-size: 1em;
+  background-color: var(--light-gold);
+  color: var(--text-dark);
+  width: 100%;
+  max-width: 400px;
+  text-align: center;
+}
+
+/* 👀 1️⃣1️⃣ Unsichtbare Elemente für dynamisches Ein-/Ausblenden */
+.hidden {
+  display: none;
+}
+
+/* 📱 1️⃣2️⃣ Responsive Anpassungen für kleinere Bildschirme */
+@media (max-width: 600px) {
+  .controls {
+    flex-direction: row; /* Links, Mitte, Rechts bleibt erhalten */
+    max-width: 100%;
+  }
+
+  .search-container input[type="text"] {
+    width: 100%;
+  }
+}
